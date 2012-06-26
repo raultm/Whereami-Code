@@ -21,6 +21,9 @@
         //Create location manager object
         locationManager = [[CLLocationManager alloc] init];
         
+        //There will be a warning from this line of code; ignore it from now
+        [locationManager setDelegate:self];
+        
         //And we want it to be as accurate as possible regardless of how much time/power it takes
         [locationManager setDesiredAccuracy:kCLLocationAccuracyBest];
     
@@ -28,5 +31,12 @@
         [locationManager startUpdatingLocation];
     }
     return self;
+}
+
+- (void) locationManager:(CLLocationManager *)manager 
+     didUpdateToLocation:(CLLocation *)newLocation 
+            fromLocation:(CLLocation *)oldLocation
+{
+    NSLog(@"%@", newLocation);
 }
 @end
