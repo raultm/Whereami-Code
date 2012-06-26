@@ -39,4 +39,10 @@
 {
     NSLog(@"%@", newLocation);
 }
+
+- (void) locationManager:(CLLocationManager *) manager 
+        didFailWithError:(NSError *)error
+{
+    NSLog(@"Could not find location: %@", error);
+}
 @end
