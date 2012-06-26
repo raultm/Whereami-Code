@@ -10,5 +10,7 @@
 #import <CoreLocation/CoreLocation.h>
 
 @interface WhereamiViewController : UIViewController
-
+{
+    CLLocationManager *locationManager;
+}
 @end
