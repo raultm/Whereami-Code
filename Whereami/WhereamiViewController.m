@@ -21,6 +21,8 @@
         //Create location manager object
         locationManager = [[CLLocationManager alloc] init];
         
+        [self doSomethingWeird];
+        
         //There will be a warning from this line of code; ignore it from now
         [locationManager setDelegate:self];
         
@@ -44,5 +46,12 @@
         didFailWithError:(NSError *)error
 {
     NSLog(@"Could not find location: %@", error);
+}
+
+- (void) doSomethingWeird
+{
+    NSLog(@"Line 1");
+    NSLog(@"Line 2");
+    NSLog(@"Line 3");
 }
 @end
