@@ -30,6 +30,9 @@
         //Set Distance Filter to 50 meters
         [locationManager setDistanceFilter:50];
         
+        //Silver - is it ok?
+        [locationManager startUpdatingHeading];
+        
         //Tell our manager to start looking for its location immediately
         [locationManager startUpdatingLocation];
     }
@@ -47,6 +50,12 @@
         didFailWithError:(NSError *)error
 {
     NSLog(@"Could not find location: %@", error);
+}
+
+- (void)locationManager:(CLLocationManager *)manager 
+       didUpdateHeading:(CLHeading *)newHeading
+{
+    NSLog(@"%@", newHeading);
 }
 
 
