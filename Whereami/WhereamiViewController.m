@@ -48,10 +48,6 @@
     NSLog(@"Could not find location: %@", error);
 }
 
-- (void) doSomethingWeird
-{
-    NSLog(@"Line 1");
-    NSLog(@"Line 2");
-    NSLog(@"Line 3");
-}
+
+
 @end
